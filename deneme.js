@@ -25,6 +25,18 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'abi') {
+    msg.reply('efendim');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'sen naber') {
+    msg.reply('ben sen');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'hayat nasıl gidiyor') {
     msg.reply('dümdüz');
   }
