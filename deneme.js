@@ -25,6 +25,30 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'kac cm') {
+    msg.reply('bilmiyom yatakda görmek istermisin');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'sik') {
+    msg.reply('uyok amınağğ');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'hmm') {
+    msg.reply('düşünüyoğum behle');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'sevgili olalım mı?') {
+    msg.reply('hayır');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'abi') {
     msg.reply('efendim');
   }
@@ -43,7 +67,7 @@ client.on('message', msg => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowerCase() === 'yardim') {
+  if (message.content.toLowerCase() === prefix + 'yardım') {
     const kanal = new MessageEmbed()
 
     .setTitle('yardim komutları')
