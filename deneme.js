@@ -49,6 +49,18 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'seni kim yaptı') {
+    msg.reply('@TheLord bu mal');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'seni kim yaptı') {
+    msg.reply('@TheLord bu mal');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'abi') {
     msg.reply('efendim');
   }
@@ -63,6 +75,33 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'hayat nasıl gidiyor') {
     msg.reply('dümdüz');
+  }
+});
+
+client.on('message', message => {
+  if (!message.guild) return;
+  if (message.content.startsWith('--kick')) {
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('Bunu yapamazsın')
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member
+          .kick()
+          .then(() => {
+          const log = message.guild.channels.cache.find(channel => channel.name === 'log-kanalı')
+           log.send(`${user.tag} ile beraber kaçtı`);
+          })
+          .catch(err => {
+            message.reply('Bunu yapamam.');
+            console.error(err);
+          });
+      } else {
+        message.reply("Bahsettiğin kişi bizim sunucuda bulunmuyor");
+      }
+    } else {
+      message.reply("Atılacak kişiyi yazmadın");
+    }
   }
 });
 
