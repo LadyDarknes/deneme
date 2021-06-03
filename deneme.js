@@ -31,6 +31,12 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix +  'boş yapma') {
+    msg.reply('tmm api büyüksün :d');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'malmısın') {
     msg.reply('sensin mal');
   }
