@@ -25,6 +25,80 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'hayat nasıl gidiyor') {
+    msg.reply('dümdüz');
+  }
+});
+
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'yardim') {
+    const kanal = new MessageEmbed()
+
+    .setTitle('yardim komutları')
+    .setDescription('--play (url) komuduyla yapıştırdığınız url ye ait ses çalar.')
+    .setAuthor('TheLord')
+    .setColor("RANDOM")
+    .setThumbnail('https://media.discordapp.net/attachments/849278516700774450/850114333458300938/kuroshitsuji.png')
+    .addField(':hearts: -- yazıp herhangi birsohbet başlatırsanız bot size cevap vercektir.');
+    message.channel.send(kanal);
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'sa') {
+    msg.reply('as knkm');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'sen çok güzelsin') {
+    msg.reply('sağol');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'adhal') {
+    msg.reply('adamımı soruyon');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'çok komiksin') {
+    msg.reply('tşk');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'napim') {
+    msg.reply('31 çek');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'ben gayım') {
+    msg.reply('napim');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'hello') {
+    msg.reply('türkçe yazsana knk');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'hi') {
+    msg.reply('türkçe yaz bro');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'yalancı') {
+    msg.reply('ne iftiraaaa');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix +  'malm ısın?') {
     msg.reply('sensin mal');
   }
