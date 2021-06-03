@@ -18,6 +18,30 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'malmısın?') {
+    msg.reply('sensin mal');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'malm ısın?') {
+    msg.reply('sensin mal');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'malmısın') {
+    msg.reply('sensin mal');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'mal mısın') {
+    msg.reply('sensin mal');
+  }
+});
+
 client.on('message', async message => {
   if (message.content.startsWith('--play')) {
    const args = message.content.split(' ').slice(1)
