@@ -19,25 +19,25 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'malmısın?') {
+  if (msg.content.toLowerCase() === prefix + 'malmısın?') {
     msg.reply('sensin mal');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'malm ısın?') {
+  if (msg.content.toLowerCase() === prefix +  'malm ısın?') {
     msg.reply('sensin mal');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'malmısın') {
+  if (msg.content.toLowerCase() === prefix + 'malmısın') {
     msg.reply('sensin mal');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === 'mal mısın') {
+  if (msg.content.toLowerCase() === prefix +  'mal mısın') {
     msg.reply('sensin mal');
   }
 });
