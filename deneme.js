@@ -67,6 +67,12 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'stop') {
+    msg.reply('komudu ekleyince haber veririm :D');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content.toLowerCase() === prefix + 'sen naber') {
     msg.reply('ben sen');
   }
